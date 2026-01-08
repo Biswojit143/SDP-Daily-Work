@@ -4,7 +4,7 @@ import Display from "./Display";
 
 function App() {
   return (
-    <NameContext.Provider value="Rahul">
+    <NameContext.Provider value="Biswojit Sahoo">
       <Display />
     </NameContext.Provider>
   );
