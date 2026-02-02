@@ -1,26 +1,26 @@
 # Day 22 — GraphQL Intro (Apollo Client v3)
 
 This project introduces GraphQL usage on the frontend using React and Apollo Client.
-It demonstrates how data can be fetched using GraphQL queries instead of REST APIs.
+It demonstrates how data can be fetched using GraphQL queries instead of traditional REST APIs.
 
-The project uses Apollo Client **v3** (intentionally), because it provides a stable and simpler API for learning, including the `useQuery` hook.
+The project intentionally uses Apollo Client version 3, which provides a stable and beginner-friendly API including the `useQuery` hook.
 
 A public GraphQL API is used, so no backend setup is required.
 
 Project structure:
 
-Day-22-graphql-intro/
-├─ src/
-│  ├─ App.jsx
-│  └─ main.jsx
-├─ index.html
-├─ vite.config.js
-├─ package.json
-└─ README.md
+    Day-22-graphql-intro/
+    ├─ src/
+    │  ├─ App.jsx
+    │  └─ main.jsx
+    ├─ index.html
+    ├─ vite.config.js
+    ├─ package.json
+    └─ README.md
 
 To run this project in VS Code:
 
-1. Open a terminal inside the project folder  
+1. Open a terminal inside the project folder
 2. Install dependencies:
    npm install
 3. Start the development server:
@@ -30,25 +30,23 @@ To run this project in VS Code:
 
 What this project does:
 
-- Connects a React app to a GraphQL endpoint
-- Fetches data using a GraphQL query
-- Displays a list of countries from the API
-- Handles loading and error states correctly
+- Connects a React application to a GraphQL endpoint
+- Fetches data using GraphQL queries
+- Displays a list of items from the API
+- Handles loading and error states properly
 
 Important dependency note:
 
-This project uses:
-- @apollo/client version 3.x
-- graphql package
+- Apollo Client v3 is used intentionally
+- Apollo Client v4 was avoided to prevent hook import confusion
+- The `useQuery` hook comes directly from `@apollo/client`
 
-Apollo Client v4 was intentionally avoided because it changes how hooks like `useQuery` are imported, which can cause confusion during learning.
+What you learn from this project:
 
-Key learning outcomes:
-
-- Understanding how GraphQL differs from REST
-- Learning how Apollo Client manages GraphQL state
-- Using `useQuery` to fetch and render data
-- Handling loading and error states in GraphQL-based UIs
+- How GraphQL differs from REST
+- How Apollo Client manages GraphQL state
+- How to write and execute GraphQL queries
+- How to handle loading and error states in GraphQL UIs
 
 Notes:
 
