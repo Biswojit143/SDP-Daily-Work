@@ -1,16 +1,58 @@
-# React + Vite
+# Day 21 — State Persistence & Offline Handling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates how frontend state can be persisted across page reloads and how basic offline and online status can be handled in a React application.
 
-Currently, two official plugins are available:
+The focus of this project is reliability on the frontend by ensuring that important UI state is not lost when the user refreshes the page or temporarily goes offline.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project is built using React with Vite and does not rely on any backend or API.
 
-## React Compiler
+Project structure:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Day-21-state-persistence/
+├─ src/
+│  └─ App.jsx
+├─ index.html
+├─ vite.config.js
+├─ package.json
+└─ README.md
 
-## Expanding the ESLint configuration
+To run this project in VS Code:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Open a terminal inside the project folder  
+2. Install dependencies:
+   npm install
+3. Start the development server:
+   npm run dev
+4. Open the browser at:
+   http://localhost:5173
+
+What this project does:
+
+- Persists application state using browser localStorage
+- Restores state automatically after page refresh
+- Detects online and offline network status
+- Updates UI based on network availability
+
+How the logic works:
+
+- The counter value is saved to localStorage whenever it changes
+- On page load, the saved value is read and restored
+- Browser online and offline events are listened to using window events
+- The UI reflects the current network status in real time
+
+Key learning outcomes:
+
+- Understanding state persistence on the frontend
+- Using localStorage for simple data storage
+- Detecting offline and online status in the browser
+- Improving user experience during network interruptions
+
+Notes:
+
+- No service workers are used in this project
+- This is not a full Progressive Web App (PWA)
+- No backend or API calls are involved
+- Works on Windows, macOS, and Linux
+
+Status:
+Day 21 complete. State persistence and offline handling implemented successfully.

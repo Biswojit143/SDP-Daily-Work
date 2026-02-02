@@ -1,46 +1,11 @@
-Perfect request 👍
-Below is a **complete, clean, copy-paste–ready `README.md`** for **Day-23 Component Testing (Advanced)**.
-
-You can **directly copy this entire section** and paste it into `README.md`.
-No edits needed.
-
----
-
-```md
 # Day 23 — Component Testing (Advanced)
 
-This project demonstrates **advanced component testing in React** using:
+This project demonstrates advanced component testing in React using Vitest and React Testing Library.  
+It focuses on snapshot testing and integration testing so that anyone copying this project can understand how real-world React components are tested.
 
-- **Vitest** (test runner)
-- **React Testing Library**
-- **Snapshot testing**
-- **Integration (user interaction) testing**
+The project uses React with Vite and contains a simple Counter component that is fully tested.
 
-It is a beginner-friendly, clean setup intended for learning and understanding how real-world React components are tested.
-
----
-
-## 📌 What This Project Covers
-
-- Writing **snapshot tests** to catch UI changes
-- Writing **integration tests** to test user behavior
-- Using **Vitest** with Vite + React
-- Testing React components the **right way (user-centric)**
-
----
-
-## 🧱 Tech Stack
-
-- React (Vite)
-- Vitest
-- React Testing Library
-- jsdom
-
----
-
-## 📁 Project Structure
-
-```
+Project structure:
 
 Day-23-component-testing/
 ├─ src/
@@ -50,134 +15,43 @@ Day-23-component-testing/
 │  ├─ setupTests.js
 │  ├─ App.jsx
 │  └─ main.jsx
-├─ **snapshots**/
+├─ snapshots/
 │  └─ Counter.test.jsx.snap
 ├─ vite.config.js
 ├─ package.json
 └─ README.md
 
-````
+To run this project in VS Code:
 
----
+1. Open a terminal in the project folder  
+2. Install dependencies:
+   npm install
+3. (Optional) Run the app in the browser:
+   npm run dev  
+   Open http://localhost:5173
+4. Run component tests:
+   npx vitest
 
-## ▶️ How to Run This Project (VS Code)
+What this project does:
 
-### 1️⃣ Clone or Copy the Project
+- Renders a Counter component
+- Uses snapshot testing to detect UI structure changes
+- Uses integration tests to simulate real user interactions
+- Verifies increment and reset behavior through tests
 
-Copy the project folder into your workspace or clone the repository:
+What you learn from this project:
 
-```bash
-git clone <repository-url>
-cd Day-23-component-testing
-````
+- How to set up testing in a Vite + React app
+- How snapshot tests work and when they are useful
+- How integration tests validate user behavior
+- How professional frontend component testing is done
 
----
+Notes:
 
-### 2️⃣ Install Dependencies
+- No backend or API is used
+- This is component-level testing only
+- End-to-end testing is covered in other days
+- Works on Windows, macOS, and Linux
 
-Open terminal inside the project folder and run:
-
-```bash
-npm install
-```
-
----
-
-### 3️⃣ Run the App (Optional)
-
-To see the component in browser:
-
-```bash
-npm run dev
-```
-
-Then open:
-
-```
-http://localhost:5173
-```
-
----
-
-### 4️⃣ Run Tests (Main Part)
-
-Run all tests using:
-
-```bash
-npx vitest
-```
-
-You should see output like:
-
-```
-✓ Counter Snapshot
-✓ Counter Integration
-```
-
----
-
-## 🧪 Tests Explained
-
-### ✅ Snapshot Test
-
-* Captures the component’s rendered structure
-* Fails if UI structure changes unexpectedly
-
-File:
-
-```
-src/Counter.test.jsx
-```
-
----
-
-### ✅ Integration Test
-
-* Simulates real user interaction
-* Tests button clicks and state updates
-
-File:
-
-```
-src/Counter.integration.test.jsx
-```
-
----
-
-## 🧠 What You Learn from This Project
-
-* How to test React components properly
-* Why snapshot tests are useful (and when not to overuse them)
-* How to test behavior instead of implementation details
-* How modern frontend testing works in real projects
-
----
-
-## 🚫 What This Project Does NOT Cover
-
-* End-to-end testing (Cypress / Playwright)
-* Backend testing
-* API mocking
-* Authentication
-
-Those topics are covered in other days of the roadmap.
-
----
-
-## 📌 Notes
-
-* This project uses **Vitest**, not Jest
-* The setup is optimized for **Vite + React**
-* Works on Windows, macOS, and Linux
-
----
-
-## ✅ Status
-
-✔ Day 23 — Component Testing (Advanced)
-✔ Snapshot tests
-✔ Integration tests
-
----
-
-Happy Testing 🚀
+Status:
+Day 23 complete. Snapshot and integration tests implemented and passing.
